@@ -28,6 +28,20 @@ body {
   width: 15%;
 }
 
+.weather-data {
+  line-height: 1.5;
+}
+
+.wether-icon {
+  font-size: 30px;
+  margin-top: 15px;
+}
+
+.current-temperature {
+  font-size: 35px;
+  margin-left: 10px;
+}
+
 footer {
   text-align: center;
   color: #55585b;
