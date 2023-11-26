@@ -28,23 +28,19 @@ body {
   width: 15%;
 }
 
-.wether-icon {
-  font-size: 30px;
-  margin-top: 15px;
+.weather-app-icon {
+  width: 45px;
+  height: 45px;
 }
 
-.current-temperature {
-  font-size: 35px;
-  margin-left: 10px;
-}
-
-.weather-degrees {
-  font-size: 35px;
-}
-
-.weather-container {
+.weather-app-container {
   display: flex;
   justify-content: space-between;
+}
+
+.temperature-container {
+  display: flex;
+  font-size: 35px;
 }
 
 .current-weather-details {

@@ -14,7 +14,11 @@ function refreshWeather(response) {
   let currentDateElement = document.querySelector("#current-day-time");
   let date = new Date(response.data.time * 1000);
 
+  let iconElement = document.querySelector("#icon");
+  let weatherIcon = `<img src="${response.data.condition.icon_url}" class ="weather-app-icon"/>`;
+
   currentDateElement.innerHTML = formatDate(date);
+  iconElement.innerHTML = weatherIcon;
   temperatureElement.innerHTML = currentTemperature;
   feelsLikeElement.innerHTML = actualFeelsLike;
   conditionELement.innerHTML = conditionDescription;
