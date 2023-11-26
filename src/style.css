@@ -42,6 +42,15 @@ body {
   margin-left: 10px;
 }
 
+.weather-degrees {
+  font-size: 35px;
+}
+
+.current-weather-data {
+  position: relative;
+  margin-right: 0;
+}
+
 footer {
   text-align: center;
   color: #55585b;

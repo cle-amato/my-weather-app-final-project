@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@200;300;400;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <title>Weather Forecast</title>
   </head>
   <body>
@@ -31,9 +32,13 @@
         <p class="current-day-time">Tuesday, 21 November 21:38</p>
         <div class="current-weather-data">
           <span class="wether-icon">☀</span>
-          <span class="current-temperature">8°C</span>
+          <span class="current-temperature">8</span
+          ><span class="weather-degrees">°C</span>
 
-          <div class="feels-like-temperature">Feels like 6°</div>
+          <div class="feels-like-row">
+            Feels like <span id="feels-like-temperature">6</span>°
+          </div>
+          <div class="weather-condition">Sunny</div>
           <div class="precipitation">Precipitation: 70%</div>
         </div>
       </main>
