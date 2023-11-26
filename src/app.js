@@ -1,10 +1,20 @@
 function refreshWeather(response) {
   let currentTemperature = Math.round(response.data.temperature.current);
   let temperatureElement = document.querySelector(".current-temperature");
-  temperatureElement.innerHTML = currentTemperature;
+
   let feelsLikeElement = document.querySelector("#feels-like-temperature");
   let actualFeelsLike = Math.round(response.data.temperature.feels_like);
+
+  let conditionELement = document.querySelector("#description");
+  let conditionDescription = response.data.condition.description;
+
+  let humidityElement = document.querySelector("#humidity");
+  let currentHumidity = response.data.temperature.humidity;
+
+  temperatureElement.innerHTML = currentTemperature;
   feelsLikeElement.innerHTML = actualFeelsLike;
+  conditionELement.innerHTML = conditionDescription;
+  humidityElement.innerHTML = currentHumidity;
 }
 
 function searchCity(city) {

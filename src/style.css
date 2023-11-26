@@ -28,10 +28,6 @@ body {
   width: 15%;
 }
 
-.weather-data {
-  line-height: 1.5;
-}
-
 .wether-icon {
   font-size: 30px;
   margin-top: 15px;
@@ -46,9 +42,15 @@ body {
   font-size: 35px;
 }
 
-.current-weather-data {
-  position: relative;
-  margin-right: 0;
+.weather-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.current-weather-details {
+  margin-right: 10px;
+  line-height: 1.5;
+  font-size: 15px;
 }
 
 footer {
