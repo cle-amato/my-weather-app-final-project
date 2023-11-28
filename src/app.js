@@ -76,7 +76,34 @@ function handleSearch(event) {
   searchCity(cityInput.value);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+  forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="col-2">
+         <div class="weather-forecast-day">
+              <div class="weather-forecast-date">${day}</div>
+              <div class="forecast-icon">☀</div>
+              <div class="temperature-forecast">
+                <span class="temperature-forecast-max">15°</span>
+                <span class="temperature-forecast-min"> 3°</span>
+              </div>
+            </div>
+            </div>
+
+        
+`;
+  });
+
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let form = document.querySelector("#search-city-form");
 form.addEventListener("submit", handleSearch);
 
 searchCity("Rome");
+displayForecast();
