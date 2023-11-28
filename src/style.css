@@ -49,6 +49,24 @@ body {
   font-size: 15px;
 }
 
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+}
+
+.forecast-icon {
+  width: 35px;
+  height: 35px;
+}
+
+.temperature-forecast-min {
+  opacity: 0.5;
+}
+
 footer {
   text-align: center;
   color: #55585b;
