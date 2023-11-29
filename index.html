@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,6 +16,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="src/style.css" />
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <title>Weather Forecast</title>
   </head>
@@ -34,7 +35,7 @@
         </form>
       </header>
       <main>
-        <h1 class="weather-city" id="city">Rome</h1>
+        <h1 class="weather-city" id="city"></h1>
         <p id="current-day-time"></p>
         <div class="weather-app-container">
           <div class="temperature-container">

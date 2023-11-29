@@ -1,4 +1,6 @@
 function refreshWeather(response) {
+  let cityElement = document.querySelector("#city");
+
   let currentTemperature = Math.round(response.data.temperature.current);
   let temperatureElement = document.querySelector(".current-temperature");
 
@@ -17,12 +19,15 @@ function refreshWeather(response) {
   let iconElement = document.querySelector("#icon");
   let weatherIcon = `<img src="${response.data.condition.icon_url}" class ="weather-app-icon"/>`;
 
+  cityElement.innerHTML = response.data.city;
   currentDateElement.innerHTML = formatDate(date);
   iconElement.innerHTML = weatherIcon;
   temperatureElement.innerHTML = currentTemperature;
   feelsLikeElement.innerHTML = actualFeelsLike;
   conditionELement.innerHTML = conditionDescription;
   humidityElement.innerHTML = currentHumidity;
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -76,7 +81,15 @@ function handleSearch(event) {
   searchCity(cityInput.value);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = `ca0094f431ob9cbfef2ed6ce95bt0cc7`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response);
+
   let forecastElement = document.querySelector("#forecast");
   let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
   forecastHtml = "";
@@ -106,4 +119,3 @@ let form = document.querySelector("#search-city-form");
 form.addEventListener("submit", handleSearch);
 
 searchCity("Rome");
-displayForecast();
