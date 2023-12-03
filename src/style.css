@@ -28,6 +28,10 @@ body {
   width: 15%;
 }
 
+h1 {
+  margin-top: 25px;
+}
+
 .weather-app-icon {
   width: 45px;
   height: 45px;
@@ -50,8 +54,9 @@ body {
 }
 
 .weather-forecast {
-  margin-top: 20px;
+  margin-top: 30px;
   text-align: center;
+  width: 120%;
 }
 
 .weather-forecast-date {
@@ -59,8 +64,10 @@ body {
 }
 
 .forecast-icon {
-  width: 35px;
-  height: 35px;
+  width: 38px;
+  height: 38px;
+  display: block;
+  margin: 0 auto;
 }
 
 .temperature-forecast-min {
