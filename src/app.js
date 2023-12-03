@@ -10,6 +10,9 @@ function refreshWeather(response) {
   let conditionELement = document.querySelector("#description");
   let conditionDescription = response.data.condition.description;
 
+  let windSpeedElement = document.querySelector("#wind-speed");
+  let currentWindSpeed = Math.round(response.data.wind.speed * 3.6);
+
   let humidityElement = document.querySelector("#humidity");
   let currentHumidity = `${response.data.temperature.humidity}%`;
 
@@ -25,6 +28,7 @@ function refreshWeather(response) {
   temperatureElement.innerHTML = currentTemperature;
   feelsLikeElement.innerHTML = actualFeelsLike;
   conditionELement.innerHTML = conditionDescription;
+  windSpeedElement.innerHTML = currentWindSpeed;
   humidityElement.innerHTML = currentHumidity;
 
   getForecast(response.data.city);
